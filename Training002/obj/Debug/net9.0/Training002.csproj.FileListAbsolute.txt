@@ -1,0 +1,15 @@
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\bin\Debug\net9.0\Training002.exe
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\bin\Debug\net9.0\Training002.deps.json
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\bin\Debug\net9.0\Training002.runtimeconfig.json
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\bin\Debug\net9.0\Training002.dll
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\bin\Debug\net9.0\Training002.pdb
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\obj\Debug\net9.0\Training002.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\obj\Debug\net9.0\Training002.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\obj\Debug\net9.0\Training002.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\obj\Debug\net9.0\Training002.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\obj\Debug\net9.0\Training002.sourcelink.json
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\obj\Debug\net9.0\Training002.dll
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\obj\Debug\net9.0\refint\Training002.dll
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\obj\Debug\net9.0\Training002.pdb
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\obj\Debug\net9.0\Training002.genruntimeconfig.cache
+C:\Users\user\Documents\GitHub\MD_Programmers\Training002\obj\Debug\net9.0\ref\Training002.dll

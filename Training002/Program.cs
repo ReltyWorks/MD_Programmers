@@ -54,18 +54,17 @@ using System.Collections.Generic;
 public class Solution {
     public int solution(int n) {
         // 선언, 초기화
-        int answer = 0;
         double doubleN = 0;
         List<int> primeNumbers = new List<int>();
         primeNumbers.Add(2);
         bool isContainedInPrimeNumbers = false;
-        bool isCurrentNumberPrime = false;
+        bool isCurrentNumberPrime = true;
 
         // 전체 루틴을 n만큼 반복하고 싶다.
-        for (int i = 1; i < n; i++) {
+        for (int i = 2; i <= n; i++) {
 
             // 제곱근을 구한다.
-            doubleN = i + 1;
+            doubleN = i;
             doubleN = Math.Sqrt(doubleN);
 
             // 제곱근이 정수로 떨어진다면, 소수가 아니다.
@@ -75,31 +74,36 @@ public class Solution {
             isContainedInPrimeNumbers = primeNumbers.Contains(i);
             if (isContainedInPrimeNumbers) continue;
 
-            // 소수 컬렉션으로 n의 인자 i를 검사한다.
+            // 소수 확인을 위해 소수 컬렉션으로 n의 인자 i를 검사한다.
             for (int ii = 0; ii < primeNumbers.Count; ii++) {
-
-                // i를 소수 컬렉션의 인자로 나눠서 나머지가 없다면 소수가 아님, 다음 인자로
-                if (i % primeNumbers[ii] == 0) continue;
 
                 // 이번에 검사할 소수 컬렉션의 인자가 n의 제곱근보다 크면 반복문 종료.
                 if (primeNumbers[ii] > doubleN) break;
 
-                // ii를 
-
+                // i를 소수 컬렉션의 인자로 나눠서 나머지가 없다면 소수가 아님
+                if (i % primeNumbers[ii] == 0) isCurrentNumberPrime = false;
             }
 
+            // 현재 검사값이 소수이고, 소수 컬렉션에 없다면, 추가함
             if (isCurrentNumberPrime && !primeNumbers.Contains(i)) primeNumbers.Add(i);
+
+            // 루틴이 마무리 되었고 검사값을 초기화한다.
+            isCurrentNumberPrime = true;
         }
 
-        return answer;
+        return primeNumbers.Count;
     }
 }
 class Program {
     static void Main() {
         Solution solution = new Solution();
 
-        int x = 10;
+        int x = 100;
 
         Console.WriteLine(solution.solution(x));
     }
 }
+
+// 변수값을 이쁘게 적으라고 해서 그렇게 했는데,
+// 이렇게 길어지니까 진짜 노답인데?
+// 시간 초과가 떳다... 에반데? 일단 저장
