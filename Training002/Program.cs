@@ -52,14 +52,44 @@ using System;
 using System.Collections.Generic;
 
 public class Solution {
-    List<int> primeNumbers = new List<int>();
     public int solution(int n) {
         // 선언, 초기화
         int answer = 0;
-        double doubleN = n;
+        double doubleN = 0;
+        List<int> primeNumbers = new List<int>();
+        primeNumbers.Add(2);
+        bool isContainedInPrimeNumbers = false;
+        bool isCurrentNumberPrime = false;
 
-        // 제곱근을 구한다.
-        doubleN = Math.Sqrt(doubleN);
+        // 전체 루틴을 n만큼 반복하고 싶다.
+        for (int i = 1; i < n; i++) {
+
+            // 제곱근을 구한다.
+            doubleN = i + 1;
+            doubleN = Math.Sqrt(doubleN);
+
+            // 제곱근이 정수로 떨어진다면, 소수가 아니다.
+            if (doubleN % (int)doubleN == 0) continue;
+
+            // 현재 수가 소수 컬렉션에 포함되어있나?
+            isContainedInPrimeNumbers = primeNumbers.Contains(i);
+            if (isContainedInPrimeNumbers) continue;
+
+            // 소수 컬렉션으로 n의 인자 i를 검사한다.
+            for (int ii = 0; ii < primeNumbers.Count; ii++) {
+
+                // i를 소수 컬렉션의 인자로 나눠서 나머지가 없다면 소수가 아님, 다음 인자로
+                if (i % primeNumbers[ii] == 0) continue;
+
+                // 이번에 검사할 소수 컬렉션의 인자가 n의 제곱근보다 크면 반복문 종료.
+                if (primeNumbers[ii] > doubleN) break;
+
+                // ii를 
+
+            }
+
+            if (isCurrentNumberPrime && !primeNumbers.Contains(i)) primeNumbers.Add(i);
+        }
 
         return answer;
     }
