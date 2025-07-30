@@ -52,45 +52,44 @@ using System;
 using System.Collections.Generic;
 
 public class Solution {
+    List<int> primeNumbers = new List<int>(); // (수정)
     public int solution(int n) {
         // 선언, 초기화
-        double doubleN = 0;
         List<int> primeNumbers = new List<int>();
-        primeNumbers.Add(2);
         bool isContainedInPrimeNumbers = false;
         bool isCurrentNumberPrime = true;
+
+        // 일단 2라도 있어야 돌아감 (수정)
+        if (!primeNumbers.Contains(2)) primeNumbers.Add(2);
 
         // 전체 루틴을 n만큼 반복하고 싶다.
         for (int i = 2; i <= n; i++) {
 
-            // 제곱근을 구한다.
-            doubleN = i;
-            doubleN = Math.Sqrt(doubleN);
-
-            // 제곱근이 정수로 떨어진다면, 소수가 아니다.
-            if (doubleN % (int)doubleN == 0) continue;
-
-            // 현재 수가 소수 컬렉션에 포함되어있나?
-            isContainedInPrimeNumbers = primeNumbers.Contains(i);
-            if (isContainedInPrimeNumbers) continue;
-
-            // 소수 확인을 위해 소수 컬렉션으로 n의 인자 i를 검사한다.
-            for (int ii = 0; ii < primeNumbers.Count; ii++) {
-
-                // 이번에 검사할 소수 컬렉션의 인자가 n의 제곱근보다 크면 반복문 종료.
-                if (primeNumbers[ii] > doubleN) break;
-
-                // i를 소수 컬렉션의 인자로 나눠서 나머지가 없다면 소수가 아님
-                if (i % primeNumbers[ii] == 0) isCurrentNumberPrime = false;
-            }
-
-            // 현재 검사값이 소수이고, 소수 컬렉션에 없다면, 추가함
-            if (isCurrentNumberPrime && !primeNumbers.Contains(i)) primeNumbers.Add(i);
-
-            // 루틴이 마무리 되었고 검사값을 초기화한다.
+            // 검사 시작 전, 일단 현재 숫자를 "소수일 것이다"라고 가정한다.
             isCurrentNumberPrime = true;
-        }
 
+            // 제곱근을 구한다.
+            double doubleN = Math.Sqrt(i);
+
+            // 2. 이미 찾은 소수들로만 나누어 본다. (foreach로 가독성을 높였어)
+            foreach (int prime in primeNumbers) {
+
+                // 3. 나누어 떨어지면 소수가 아니다!
+                if (i % prime == 0) {
+                    isCurrentNumberPrime = false; // "소수가 아니다"라고 확정!
+                    break; // 4. 더 이상 검사할 필요가 없으므로 즉시 안쪽 반복문 탈출 (핵심!)
+                }
+
+                // 5. 검사할 소수가 현재 수의 제곱근보다 크면 더 볼 필요가 없다. (원래 있던 좋은 로직!)
+                if (prime > doubleN) {
+                    break;
+                }
+            }
+            // 6. 위 반복문의 모든 검사를 통과했다면 (isPrime이 여전히 true라면) 진짜 소수다.
+            if (isCurrentNumberPrime) {
+                primeNumbers.Add(i);
+            }
+        }
         return primeNumbers.Count;
     }
 }
@@ -99,11 +98,15 @@ class Program {
         Solution solution = new Solution();
 
         int x = 100;
+        int y = 1000;
 
         Console.WriteLine(solution.solution(x));
+        Console.WriteLine(solution.solution(y));
     }
 }
 
 // 변수값을 이쁘게 적으라고 해서 그렇게 했는데,
 // 이렇게 길어지니까 진짜 노답인데?
 // 시간 초과가 떳다... 에반데? 일단 저장
+// 시간 초과가 떠서 primeNumbers을 함수 밖으로 빼봤다.. 소수는 계속 가지고 가게..
+// 결국 잼민이의 도움을 받았다. 알고리즘, 효율.

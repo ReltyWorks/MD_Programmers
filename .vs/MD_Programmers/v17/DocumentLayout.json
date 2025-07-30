@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Documents\\GitHub\\MD_Programmers\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33CAFABD-C3F4-4D05-8608-69AF85E14AB1}|Training002\\Training002.csproj|c:\\users\\user\\documents\\github\\md_programmers\\training002\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33CAFABD-C3F4-4D05-8608-69AF85E14AB1}|Training002\\Training002.csproj|solutionrelative:training002\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{02BCF2A3-B9C2-4813-9D1C-B33FFED513B7}|Training003\\Training003.csproj|c:\\users\\user\\documents\\github\\md_programmers\\training003\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02BCF2A3-B9C2-4813-9D1C-B33FFED513B7}|Training003\\Training003.csproj|solutionrelative:training003\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,13 +20,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\MD_Programmers\\Training002\\Program.cs",
-              "RelativeDocumentMoniker": "Training002\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\MD_Programmers\\Training002\\Program.cs",
-              "RelativeToolTip": "Training002\\Program.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAowGwAAAAaAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\MD_Programmers\\Training003\\Program.cs",
+              "RelativeDocumentMoniker": "Training003\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\MD_Programmers\\Training003\\Program.cs",
+              "RelativeToolTip": "Training003\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAiwCsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T05:58:53.366Z",
+              "WhenOpened": "2025-07-30T04:30:25.712Z",
               "EditorCaption": ""
             }
           ]
